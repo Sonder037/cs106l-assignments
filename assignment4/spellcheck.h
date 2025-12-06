@@ -9,6 +9,8 @@ struct Token {
   std::string content;
   size_t src_offset;
 
+  Token() = default;
+
   template <typename It>
   Token(std::string& source, It begin, It end)
       : src_offset{static_cast<std::size_t>(std::distance(source.begin(), begin))},
